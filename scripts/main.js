@@ -14,7 +14,7 @@ function CalculateCompoundTransform(transforms) {
     compound_transform = new Matrix(4, 4);
 
     if (transforms.length != 1) {
-        for (i = 0; i < transforms.length; i++) {
+        for (i = transforms.length-1; i >= 0; i--) {
             transform_matrices[i] = transforms[i].mat4x4;
         }
         compound_transform = Matrix.multiply(transform_matrices);
