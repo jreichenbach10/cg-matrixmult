@@ -64,7 +64,7 @@ function ChangeTransform(index, type, values) {
     else {
         Mat4x4RotateZ(app.transforms[index].mat4x4, values[0]);
     }
-    // recalculate compound transform and tranformed vertex
+    
     app.compound = CalculateCompoundTransform(app.transforms);
     app.final_vertex = CalculateTransformedVertex(app.vertex);
 }
